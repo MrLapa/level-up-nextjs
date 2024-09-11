@@ -1,11 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
+import Image from "next/image";
+import styles from "../../page.module.css";
+
+export default function Shop({ params }) {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1>Home</h1>
+        <h1>{`Shop slugs: ${params.slug.join(",")}`}</h1>
         <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
